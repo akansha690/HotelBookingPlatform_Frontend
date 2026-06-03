@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #7C3AED;
+  --brand-light: #EDE9FE;
+  --brand-dark: #5B21B6;
+  --accent: #F59E0B;
+  --page-bg: #F5F3FF;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: #1E1B4B;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ── Buttons ── */
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #7C3AED;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+.btn-brand:hover    { background: #6D28D9; }
+.btn-brand:active   { transform: scale(0.97); }
+.btn-brand:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #EDE9FE;
+  color: #7C3AED;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  border: 1px solid #C4B5FD;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-outline:hover { background: #DDD6FE; }
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FEF2F2;
+  color: #DC2626;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  border: 1px solid #FECACA;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-danger:hover    { background: #FEE2E2; }
+.btn-danger:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-success {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #059669;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-success:hover    { background: #047857; }
+.btn-success:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Card ── */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #EDE9FE;
+  padding: 20px;
+}
+
+/* ── Input ── */
+.input-field {
+  width: 100%;
+  border: 1.5px solid #C4B5FD;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #1E1B4B;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+.input-field:focus {
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+.input-field::placeholder { color: #9CA3AF; }
+
+.input-error {
+  border-color: #F87171 !important;
+  background: #FEF2F2 !important;
+}
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+}
