@@ -29,7 +29,7 @@ export default function ProtectedRoute({ children }) {
 
   if (!user) {
     console.log("ProtectedRoute — no user, redirecting to /login");
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;
