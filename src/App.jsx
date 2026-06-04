@@ -23,11 +23,11 @@ function App() {
   return (
     <Routes>
       {/* Public routes — bounce to home if already logged in */}
+      <Route path="/"             element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/login"    element={<AuthRoute><Login /></AuthRoute>} />
       <Route path="/register" element={<AuthRoute><Register /></AuthRoute>} />
 
       {/* Protected routes */}
-      <Route path="/"             element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/hotel/:id"    element={<ProtectedRoute><HotelDetails /></ProtectedRoute>} />
       <Route path="/room/:id"     element={<ProtectedRoute><RoomDetails /></ProtectedRoute>} />
       <Route path="/my-bookings"  element={<ProtectedRoute><MyBookings /></ProtectedRoute>} />
