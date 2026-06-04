@@ -7,6 +7,6 @@ export default defineConfig({
   preview: {
     port: parseInt(process.env.PORT) || 4173,
     host: true,
-    allowedHosts: ['hotelbookingplatformfrontend-production.up.railway.app']
+    allowedHosts: "hotelbookingplatformfrontend-production.up.railway.app"
   }
 })
