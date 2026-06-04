@@ -22,8 +22,9 @@ function AuthRoute({ children }) {
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       {/* Public routes — bounce to home if already logged in */}
-      <Route path="/"             element={<ProtectedRoute><Home /></ProtectedRoute>} />
+      {/* <Route path="/"             element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
       <Route path="/login"    element={<AuthRoute><Login /></AuthRoute>} />
       <Route path="/register" element={<AuthRoute><Register /></AuthRoute>} />
 
@@ -34,7 +35,7 @@ function App() {
       <Route path="/booking/:roomId" element={<ProtectedRoute><Booking /></ProtectedRoute>} />
 
       {/* Fallback */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
 }
