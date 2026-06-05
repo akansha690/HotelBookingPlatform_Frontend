@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="bg-violet-700 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        {/* Logo — always goes home */}
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <span className="text-amber-400 text-lg">✦</span>
           <span className="text-white text-xl font-bold tracking-tight">StayEase</span>
@@ -43,13 +43,21 @@ export default function Navbar() {
           <Link to="/my-bookings" className="text-violet-200 hover:text-white text-sm transition">
             My bookings
           </Link>
-          <button
-            onClick={handleLogout}
-            className="bg-amber-400 text-indigo-900 text-sm font-bold
-              px-4 py-1.5 rounded-full hover:bg-amber-300 transition"
-          >
-            Logout
-          </button>
+
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="bg-amber-400 text-indigo-900 text-sm font-bold px-4 py-1.5 rounded-full hover:bg-amber-300 transition"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="bg-amber-400 text-indigo-900 text-sm font-bold px-4 py-1.5 rounded-full hover:bg-amber-300 transition">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </nav>
